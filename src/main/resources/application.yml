@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ${APPLICATION_NAME:calorie_diary}
+  profiles:
+    active: dev

@@ -1,0 +1,13 @@
+spring:
+
+  # Data Source properties
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres?currentSchema=${spring.application.name}}
+    username: ${DB_LOGIN:myuser}
+    password: ${DB_PASSWORD:123}
+    hikari:
+      maximum-pool-size: ${DATASOURCE_POOL_MAX_SIZE:10}
+      minimum-idle: ${DATASOURCE_POOL_MIN_IDLE:1}
+  sql:
+    init:
+      platform: postgres
